@@ -3,35 +3,251 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SiKoSoft</title>
-  <meta name="description" content="Aplicaciones de SiKoSoft, creadas por SiKo deliKo.">
+  <title>SiKoSoft — Software a medida para comercios y talleres</title>
+  <meta name="description" content="SiKoSoft desarrolla sistemas de gestión, apps para Android y Windows, integraciones y soporte técnico. Córdoba, Argentina.">
+  <meta property="og:title" content="SiKoSoft — Software a medida">
+  <meta property="og:description" content="Sistemas de gestión, apps para Android y Windows, integraciones y soporte técnico. Córdoba, Argentina.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="logo.png">
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <header><div class="contenido"><img src="logo.png" alt=""><a href="./">SiKoSoft</a></div></header>
-  <main class="contenido">
-    <h1>SiKoSoft</h1>
-    <p class="suave">Aplicaciones creadas por SiKo deliKo, desde Córdoba, Argentina.</p>
+  <header><div class="contenido ancho">
+    <img src="logo.png" alt=""><a href="./">SiKoSoft</a>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#productos">Productos</a>
+      <a href="#pantallas">Pantallas</a>
+      <a href="#trabajos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div></header>
 
-    <div class="tarjeta heroe">
-      <img src="logo.png" alt="Logo de SiKo Vitrina Pro">
-      <div>
-        <h2 style="margin-top:0"><a href="vitrina/">SiKo Vitrina Pro</a></h2>
-        <p>Catálogo de coleccionables para Android y Windows: fotos, datos, valor estimado y respaldo en tu Google Drive.</p>
+  <main class="contenido ancho">
+
+    <div class="portada">
+      <img src="logo.png" alt="Logo de SiKoSoft">
+      <div class="texto">
+        <span class="etiqueta">Córdoba, Argentina</span>
+        <h1>Software que resuelve el día a día del negocio</h1>
+        <p class="bajada">SiKoSoft desarrolla sistemas de gestión, aplicaciones para Android y Windows, e integraciones a medida. Proyectos chicos, atención directa y sin intermediarios.</p>
+        <div class="botones">
+          <a class="boton lleno" href="#contacto">Hablemos de tu proyecto</a>
+          <a class="boton" href="#productos">Ver productos</a>
+        </div>
       </div>
     </div>
 
-    <div class="tarjeta heroe">
-      <img src="logo.png" alt="Logo de SiKo Ordenes">
-      <div>
-        <h2 style="margin-top:0"><a href="ordenes/">SiKo Ordenes</a></h2>
-        <p>Órdenes de trabajo para talleres de reparación, sincronizadas entre sucursales mediante tu Google Drive.</p>
+    <!-- ---------------- Servicios ---------------- -->
+    <section id="servicios">
+      <h2>Qué hacemos</h2>
+      <div class="grilla">
+        <div class="tarjeta">
+          <h3>Sistemas de gestión</h3>
+          <p>Ventas, stock, clientes, proveedores, caja por turno y listas de precios. Funcionan en una PC sola o en red entre varias sucursales, con la base de datos en tu local.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Apps para celular y escritorio</h3>
+          <p>Aplicaciones Android y Windows pensadas para una tarea concreta: tomar pedidos, cargar órdenes de trabajo, hacer un inventario o llevar un catálogo.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Integraciones y automatización</h3>
+          <p>Sincronización entre sucursales con Google Drive, planillas de Google como respaldo administrativo, avisos por correo o WhatsApp, e informes que se generan solos.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Migración de sistemas viejos</h3>
+          <p>Rescate de datos de sistemas heredados —incluso de archivos COBOL de los años noventa— y traslado a bases de datos modernas, sin perder el histórico.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Soporte y mantenimiento</h3>
+          <p>Puesta a punto de equipos Windows, impresoras en red, respaldos, limpieza y herramientas propias de diagnóstico para dejar las máquinas listas para trabajar.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Desarrollo a pedido</h3>
+          <p>Si lo que necesitás no existe o no se parece a nada de la lista, se puede armar. La mayoría de estos productos nacieron así: de un pedido puntual de un cliente.</p>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- ---------------- Productos ---------------- -->
+    <section id="productos">
+      <h2>Productos</h2>
+      <p class="suave">Aplicaciones terminadas, instaladas y en uso.</p>
+
+      <div class="grilla">
+
+        <div class="tarjeta enlazada destacada">
+          <div class="dos-columnas">
+            <div>
+              <h3>SiKoGestión</h3>
+              <p>Sistema de gestión comercial para Windows: ventas con lector de código de barras, stock, caja por turno, clientes y cuentas corrientes, proveedores e informes. Opera en una PC o en red entre sucursales, y cada instalación se ajusta al rubro del cliente.</p>
+              <p class="pie">Windows 10/11 · En uso en librerías, jugueterías, kioscos y un salón de comidas.</p>
+            </div>
+            <img class="captura" src="imagenes/gestion-facturacion.jpg" width="1298" height="682" loading="lazy"
+                 alt="Pantalla de facturación de SiKoGestión, con el detalle de los artículos cargados y el total de la venta.">
+          </div>
+        </div>
+
+        <div class="tarjeta enlazada">
+          <h3><a href="vitrina/">SiKo Vitrina Pro</a></h3>
+          <p>Catálogo de coleccionables para Android y Windows: fotos, datos de cada pieza, valor estimado, exportación a PDF y respaldo en tu propio Google Drive.</p>
+          <p class="pie">Android y Windows · <a href="vitrina/">Ver detalle</a></p>
+        </div>
+
+        <div class="tarjeta enlazada">
+          <h3><a href="ordenes/">SiKo Órdenes</a></h3>
+          <p>Órdenes de trabajo para talleres de reparación, con app de celular para cargar equipos en el mostrador y sincronización entre sucursales mediante tu Google Drive.</p>
+          <p class="pie">Windows y Android · <a href="ordenes/">Ver detalle</a></p>
+        </div>
+
+        <div class="tarjeta enlazada">
+          <h3>SiKoPrint</h3>
+          <p>Impresión de imágenes por lotes para vidrieras y cartelería: elige la impresora, arma la hoja y manda todo junto, sin pelear con el visor de fotos de Windows.</p>
+          <p class="pie">Windows 10/11</p>
+        </div>
+
+        <div class="tarjeta enlazada">
+          <h3>SiKoCleaner</h3>
+          <p>Herramienta de limpieza y diagnóstico para Windows, en español y sin publicidad: libera espacio, revisa el estado del equipo y deja un informe de lo que hizo.</p>
+          <p class="pie">Windows 10/11</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ---------------- Galería ---------------- -->
+    <section id="pantallas">
+      <h2>En pantalla</h2>
+      <p class="suave">Capturas reales de los sistemas funcionando.</p>
+      <div class="galeria">
+        <figure>
+          <img class="captura" src="imagenes/gestion-menu.jpg" width="1400" height="758" loading="lazy"
+               alt="Menú principal de SiKoGestión, con los accesos a facturación, presupuestos, artículos y stock, clientes, planilla de caja y proveedores.">
+          <figcaption>SiKoGestión · El menú principal, con los colores y el logo de cada comercio.</figcaption>
+        </figure>
+        <figure>
+          <img class="captura" src="imagenes/gestion-articulos.jpg" width="1400" height="758" loading="lazy"
+               alt="Pantalla de artículos y stock de SiKoGestión: el formulario de carga a la izquierda y el listado con precios, vencimientos y existencias a la derecha.">
+          <figcaption>SiKoGestión · Artículos y stock, con vencimientos, precios y reposición.</figcaption>
+        </figure>
+        <figure>
+          <img class="captura" src="imagenes/gestion-estadisticas.jpg" width="1400" height="758" loading="lazy"
+               alt="Tablero de estadísticas mensuales de SiKoGestión, con el total vendido del mes, el vendedor destacado y el ranking de los diez artículos más vendidos.">
+          <figcaption>SiKoGestión · Tablero mensual: ventas, vendedor destacado y los más vendidos.</figcaption>
+        </figure>
+        <figure>
+          <img class="captura" src="imagenes/sikovision.jpg" width="1400" height="758" loading="lazy"
+               alt="SiKo-Vision: plano de una casa con las luces marcadas sobre cada ambiente, panel de clima, cámara y tareas programadas.">
+          <figcaption>SiKo-Vision · Las luces y las cámaras de la casa sobre el plano.</figcaption>
+        </figure>
+      </div>
+      <p class="pie">Las pantallas de gestión corren sobre una instalación de demostración, con datos de ejemplo.</p>
+    </section>
+
+    <!-- ---------------- Proyectos ---------------- -->
+    <section id="trabajos">
+      <h2>Otros proyectos</h2>
+      <p class="suave">Desarrollos a medida, trabajos internos y experimentos propios.</p>
+
+      <div class="linea">
+        <h2>Comercio y administración</h2>
+        <ul class="items">
+          <li><strong>Pedidos de salón</strong><span>App de celular para tomar pedidos en la mesa; llegan a la caja por WiFi y salen impresos en cocina, separados por rubro.</span></li>
+          <li><strong>Sincronización entre sucursales</strong><span>Dos o tres locales que comparten órdenes y datos a través de una carpeta de Google Drive, sin servidor propio ni abonos mensuales.</span></li>
+          <li><strong>Control de licencias</strong><span>Planilla de Google como central de licencias de las instalaciones, administrable desde el celular.</span></li>
+          <li><strong>Migrador de bases COBOL</strong><span>Lectura de archivos RM/COBOL de un sistema de los noventa y volcado a una base SQLite consultable.</span></li>
+          <li><strong>Avisos automáticos</strong><span>Correos de cierre de caja y alertas de stock que salen solos desde cada sucursal.</span></li>
+        </ul>
+      </div>
+
+      <div class="linea">
+        <h2>Apps móviles</h2>
+        <ul class="items">
+          <li><strong>Reservas de eventos</strong><span>App que trabaja contra una planilla de Google: puestos, sillas y días, con el organizador viendo todo en tiempo real.</span></li>
+          <li><strong>Guía de construcción</strong><span>Consulta de materiales y cómputos de obra desde el celular.</span></li>
+          <li><strong>Simulador de pinturería</strong><span>Prueba de colores y cálculo de litros antes de comprar la pintura.</span></li>
+          <li><strong>Colector de inventario</strong><span>Toma de inventario con el celular y descarga al sistema de la PC.</span></li>
+          <li><strong>Lector de cómics</strong><span>Lector de archivos CBR/CBZ para celular y para escritorio, con biblioteca propia.</span></li>
+        </ul>
+      </div>
+
+      <div class="linea">
+        <h2>Automatización y hogar</h2>
+        <ul class="items">
+          <li><strong>SiKo-Vision</strong><span>Plano interactivo de la casa: luces WiZ, Sonoff y Tuya, más cámaras, en una sola pantalla.</span></li>
+          <li><strong>SiKoWhatsBot</strong><span>Bot de WhatsApp sobre la API oficial: responde consultas frecuentes con menú de opciones y, si hace falta, con ayuda de IA.</span></li>
+          <li><strong>Notas sincronizadas</strong><span>Notas adhesivas de escritorio que se mantienen iguales en todas las máquinas.</span></li>
+          <li><strong>Herramientas de mantenimiento</strong><span>Instaladores, gestor de controladores y puntos de restauración, armados para dejar un equipo nuevo listo en una pasada.</span></li>
+        </ul>
+      </div>
+
+      <div class="linea">
+        <h2>Arcade y entretenimiento</h2>
+        <ul class="items">
+          <li><strong>SiKoPinball</strong><span>Frontend de pinball virtual para gabinete de tres pantallas: lanza las mesas, muestra el arte y el marcador.</span></li>
+          <li><strong>SiKoArcade</strong><span>La versión de una pantalla, para gabinetes y máquinas chicas.</span></li>
+          <li><strong>Juegos y maquetas web</strong><span>Tragamonedas, sorteos con ruleta y otras piezas chicas hechas para probar ideas.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------------- Tecnología ---------------- -->
+    <section id="tecnologia">
+      <h2>Con qué se construye</h2>
+      <ul class="chips">
+        <li>C# · .NET · WPF</li>
+        <li>Flutter</li>
+        <li>React</li>
+        <li>Python</li>
+        <li>SQLite</li>
+        <li>SQL Server</li>
+        <li>Google Apps Script</li>
+        <li>Google Drive API</li>
+        <li>Android</li>
+        <li>Windows</li>
+      </ul>
+    </section>
+
+    <!-- ---------------- Demos ---------------- -->
+    <section id="demos">
+      <h2>Demos</h2>
+      <div class="tarjeta">
+        <p>Estamos preparando demos para probar algunas aplicaciones directamente desde el navegador, sin instalar nada. Mientras tanto, si querés ver un sistema funcionando, se arregla una demostración por videollamada o en el local.</p>
+        <p class="pie"><a href="#contacto">Pedir una demostración</a></p>
+      </div>
+    </section>
+
+    <!-- ---------------- Contacto ---------------- -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="grilla">
+        <div class="tarjeta">
+          <h3>Escribinos</h3>
+          <p>Contanos qué necesitás resolver y te respondemos con una propuesta y un presupuesto.</p>
+          <p class="dato"><a href="mailto:sikosoftavisos@gmail.com?subject=Consulta%20desde%20el%20sitio%20de%20SiKoSoft">sikosoftavisos@gmail.com</a></p>
+          <p class="dato"><a href="tel:+5493525646680">+54 9 3525 64-6680</a></p>
+          <div class="botones">
+            <a class="boton lleno" href="https://wa.me/5493525646680?text=Hola%2C%20te%20escribo%20desde%20el%20sitio%20de%20SiKoSoft.">Escribir por WhatsApp</a>
+            <a class="boton" href="mailto:sikosoftavisos@gmail.com?subject=Consulta%20desde%20el%20sitio%20de%20SiKoSoft">Enviar un correo</a>
+          </div>
+        </div>
+        <div class="tarjeta">
+          <h3>Dónde estamos</h3>
+          <p>Córdoba, Argentina. Trabajamos en forma presencial en la ciudad y a distancia para el resto del país.</p>
+          <p class="pie">Soporte remoto de los sistemas ya instalados, incluido.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
-  <footer><div class="contenido">
-    <a href="mailto:sikodeliko@gmail.com">sikodeliko@gmail.com</a>
+
+  <footer><div class="contenido ancho">
+    <a href="mailto:sikosoftavisos@gmail.com">sikosoftavisos@gmail.com</a>
+    <a href="https://wa.me/5493525646680">+54 9 3525 64-6680</a>
+    <a href="vitrina/">SiKo Vitrina Pro</a>
+    <a href="ordenes/">SiKo Órdenes</a>
+    <p class="nota">SiKoSoft — Córdoba, Argentina.</p>
   </div></footer>
 </body>
 </html>

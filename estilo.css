@@ -1,44 +1,107 @@
 :root {
   --fondo: #f5f5f5;
   --superficie: #ffffff;
+  --superficie-2: #fafafa;
   --texto: #111111;
   --texto-suave: #5f5f5f;
   --rojo: #c62828;
+  --rojo-fuerte: #b71c1c;
   --borde: #e0e0e0;
   --barra: #000000;
+  --sombra: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.05);
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --fondo: #121212;
     --superficie: #1e1e1e;
+    --superficie-2: #181818;
     --texto: #f1f1f1;
     --texto-suave: #b3b3b3;
     --rojo: #ef5350;
+    --rojo-fuerte: #ff6f60;
     --borde: #333333;
+    --sombra: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
   }
 }
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--fondo);
   color: var(--texto);
   font: 16px/1.6 "Segoe UI", Roboto, system-ui, -apple-system, sans-serif;
+  overflow-wrap: break-word;
 }
+img { max-width: 100%; }
+
+/* ---------- Encabezado ---------- */
 header {
   background: var(--barra);
   color: #fff;
   padding: 14px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 header .contenido { display: flex; align-items: center; gap: 12px; }
 header img { width: 36px; height: 36px; }
 header a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+header nav { margin-left: auto; display: flex; gap: 18px; flex-wrap: wrap; }
+header nav a { font-weight: 500; font-size: .95rem; color: #d8d8d8; }
+header nav a:hover { color: #fff; }
+
+/* ---------- Estructura ---------- */
 .contenido { max-width: 760px; margin: 0 auto; }
+.contenido.ancho { max-width: 1040px; }
 main { padding: 24px 16px 48px; }
+section { padding: 8px 0 24px; }
 h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 8px; }
 h2 { font-size: 1.2rem; margin: 32px 0 8px; }
+h3 { font-size: 1.05rem; margin: 0 0 6px; }
 p, li { color: var(--texto); }
 .suave { color: var(--texto-suave); }
 a { color: var(--rojo); }
+a:hover { color: var(--rojo-fuerte); }
+ul { padding-left: 20px; }
+
+/* ---------- Portada ---------- */
+.portada {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 32px 0 20px;
+}
+.portada img { width: 120px; height: 120px; flex: none; }
+.portada h1 { font-size: 2.1rem; letter-spacing: -.5px; }
+.portada .bajada { font-size: 1.1rem; color: var(--texto-suave); margin: 0 0 18px; max-width: 46ch; }
+.portada .texto { min-width: 260px; flex: 1; }
+.etiqueta {
+  display: inline-block;
+  font-size: .78rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--rojo);
+  border: 1px solid var(--rojo);
+  border-radius: 999px;
+  padding: 2px 10px;
+  margin-bottom: 12px;
+}
+.botones { display: flex; gap: 12px; flex-wrap: wrap; }
+.boton {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid var(--rojo);
+  color: var(--rojo);
+}
+.boton:hover { background: rgba(198,40,40,.08); }
+.boton.lleno { background: var(--rojo); border-color: var(--rojo); color: #fff; }
+.boton.lleno:hover { background: var(--rojo-fuerte); border-color: var(--rojo-fuerte); color: #fff; }
+
+/* ---------- Tarjetas ---------- */
 .tarjeta {
   background: var(--superficie);
   border: 1px solid var(--borde);
@@ -48,6 +111,88 @@ a { color: var(--rojo); }
 }
 .heroe { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
 .heroe img { width: 96px; height: 96px; }
-ul { padding-left: 20px; }
+.grilla {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin: 16px 0;
+}
+.grilla .tarjeta { margin: 0; }
+.tarjeta h3 { display: flex; align-items: center; gap: 8px; }
+.tarjeta p:last-child { margin-bottom: 0; }
+.tarjeta.enlazada { box-shadow: var(--sombra); }
+.tarjeta.enlazada:hover { border-color: var(--rojo); }
+.pie { font-size: .85rem; color: var(--texto-suave); margin-top: 10px; }
+
+/* ---------- Listas de proyectos ---------- */
+.linea { border-top: 1px solid var(--borde); padding-top: 20px; margin-top: 28px; }
+.linea h2 { margin-top: 0; }
+.items { list-style: none; padding: 0; margin: 12px 0 0; }
+.items li { padding: 10px 0; border-bottom: 1px dashed var(--borde); }
+.items li:last-child { border-bottom: 0; }
+.items strong { display: block; }
+.items span { color: var(--texto-suave); font-size: .95rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; padding: 0; list-style: none; }
+.chips li {
+  font-size: .85rem;
+  color: var(--texto-suave);
+  background: var(--superficie-2);
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+
+/* ---------- Pie ---------- */
 footer { border-top: 1px solid var(--borde); padding: 20px 16px; font-size: .9rem; }
 footer a { margin-right: 16px; }
+footer .nota { color: var(--texto-suave); margin: 8px 0 0; }
+
+@media (max-width: 560px) {
+  .portada img { width: 84px; height: 84px; }
+  .portada h1 { font-size: 1.7rem; }
+  header nav { gap: 12px; }
+}
+
+/* Tarjeta destacada y contención del bloque hero */
+.heroe > div { flex: 1; min-width: 0; }
+.tarjeta.destacada {
+  border-left: 4px solid var(--rojo);
+  grid-column: 1 / -1;
+}
+.tarjeta.destacada h3 { font-size: 1.25rem; }
+
+/* Datos de contacto */
+.dato { margin: 4px 0; font-weight: 600; }
+.dato a { text-decoration: none; }
+.dato a:hover { text-decoration: underline; }
+#contacto .botones { margin-top: 16px; }
+
+/* Capturas de pantalla */
+.captura {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  background: var(--superficie-2);
+  margin: 14px 0;
+}
+.dos-columnas {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+@media (min-width: 760px) {
+  .dos-columnas { grid-template-columns: 1fr 1.1fr; }
+  .dos-columnas .captura { margin: 0; }
+}
+.galeria {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 16px 0;
+}
+.galeria figure { margin: 0; }
+.galeria .captura { margin: 0 0 8px; }
+.galeria figcaption { font-size: .9rem; color: var(--texto-suave); }
